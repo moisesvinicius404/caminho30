@@ -1,14 +1,10 @@
-
-//CADASTRO
-
-// Pega o formulário
+// -------------------- CADASTRO --------------------
 const formCadastro = document.getElementById('form-cadastro');
-const btnCadastro = document.getElementById('btn-cadastrar')
-
+const btnCadastro = document.getElementById('btn-cadastrar');
 
 if (formCadastro) {
   formCadastro.addEventListener('submit', (e) => {
-    e.preventDefault(); // impede o recarregamento da página
+    e.preventDefault();
 
     const nome = document.getElementById('nome').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -28,29 +24,54 @@ if (formCadastro) {
       return;
     }
 
-    // Validação de senha: mínimo 8 caracteres, pelo menos 1 letra maiúscula, 1 minúscula, 1 número e 1 símbolo
+    // Validação de senha
     const senhaRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if (!senhaRegex.test(senha)) {
       alert("A senha deve ter no mínimo 8 caracteres, incluindo letras maiúsculas, minúsculas, números e símbolos.");
       return;
     }
 
-    // Se passou na validação, salva no localStorage
+    // Salva no localStorage
     localStorage.setItem('usuario', JSON.stringify({ nome, email, senha }));
     localStorage.setItem('logado', 'true');
 
-    // Redireciona para a página de boas-vindas
+    // Redireciona
     window.location.href = 'boas-vindas/boas-vindas.html';
   });
 }
 
-// Evento após clique no botão cadastra da página inicial
-btnCadastro.addEventListener('click', () => {
-  window.location.href = 'cadastro.html'
-})
+// Botão de ir para cadastro (se existir)
+if (btnCadastro) {
+  btnCadastro.addEventListener('click', () => {
+    window.location.href = 'cadastro.html';
+  });
+}
 
+// -------------------- LOGIN --------------------
+const formLogin = document.getElementById('form-login');
 
-// LOGIN
+if (formLogin) {
+  formLogin.addEventListener('submit', (e) => {
+    e.preventDefault();
 
+    const email = document.getElementById('email').value.trim();
+    const senha = document.getElementById('senha').value.trim();
 
+    // Validação de email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    if (!emailRegex.test(email)) {
+      alert("Digite um email válido.");
+      return;
+    }
 
+    // Validação de senha
+    const senhaRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!senhaRegex.test(senha)) {
+      alert("A senha deve ter no mínimo 8 caracteres, incluindo letras maiúsculas, minúsculas, números e símbolos.");
+      return;
+    }
+
+    // Aqui você chamaria o backend para verificar login
+    alert("Login validado no front-end! Depois você conecta ao backend.");
+  });
+}
