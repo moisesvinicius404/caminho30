@@ -75,3 +75,20 @@ if (formLogin) {
     alert("Login validado no front-end! Depois você conecta ao backend.");
   });
 }
+
+// Funcionalidade de Ver senha
+const senhaInput = document.getElementById('senha');
+const toggleSenha = document.getElementById('toggleSenha');
+
+toggleSenha.addEventListener('click', () => {
+  if (senhaInput.type === 'password') {
+    senhaInput.type = 'text';
+    toggleSenha.classList.remove('bi-eye');
+    toggleSenha.classList.add('bi-eye-slash');
+  } else {
+    senhaInput.type = 'password';
+    toggleSenha.classList.remove('bi-eye-slash');
+    toggleSenha.classList.add('bi-eye');
+  }
+});
+
