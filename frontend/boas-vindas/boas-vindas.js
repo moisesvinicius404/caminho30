@@ -19,6 +19,8 @@ if (btnIrMissao) {
   btnIrMissao.addEventListener('click', () => {
     // Marca como logado e redireciona para a página de missões
     localStorage.setItem('logado', 'true');
-    window.location.href = '../missoes.html'; // ajuste o caminho se necessário
+    window.location.href = '../missoes.html';
+
+
   });
 }
