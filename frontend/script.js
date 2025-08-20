@@ -1,3 +1,6 @@
+
+//CADASTRO
+
 // Pega o formulário
 const formCadastro = document.getElementById('form-cadastro');
 const btnCadastro = document.getElementById('btn-cadastrar')
@@ -45,3 +48,9 @@ if (formCadastro) {
 btnCadastro.addEventListener('click', () => {
   window.location.href = 'cadastro.html'
 })
+
+
+// LOGIN
+
+
+
