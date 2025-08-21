@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas-vindas</title>
+    
+    <link rel="stylesheet" href="{% static 'boas-vindas.css' %}">
+</head>
+<body>
+    <div class="welcome-card">
+        <h1 id="saudacao">
+            🎉 Bem-vindo(a), {% if usuario.is_authenticated %}{{ usuario.username }}!{% else %}visitante!{% endif %} 🎉
+        </h1>
+        <p>Bem-vindo(a) ao Caminho30! Prepare-se para sua jornada de 30 dias.</p>
+        <button id="btn-ir-missao">Iniciar Missão</button>
+    </div>
+
+    <script src="{% static 'boas-vindas.js' %}"></script>
+</body>
+</html>
