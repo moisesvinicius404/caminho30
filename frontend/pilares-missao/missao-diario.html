@@ -3,39 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diário - Caminho30</title>
-  <link rel="stylesheet" href="../css/missao-diario.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="missao-diario.css">
+  <title>Diário Digital</title>
 </head>
 <body>
-   
-    <main class="p-4 flex-grow-1">
-      <h1>Diário de Progresso</h1>
-      <p>Complete suas tarefas e marque seu progresso. Dividido em 4 etapas, uma para cada semana.</p>
-      
-      <div class="progress-container mt-4">
-        <div class="progress-step mb-3">
-          <h5>Semana 1</h5>
-          <input type="checkbox" id="week1"> Concluído
-        </div>
-        <div class="progress-step mb-3">
-          <h5>Semana 2</h5>
-          <input type="checkbox" id="week2"> Concluído
-        </div>
-        <div class="progress-step mb-3">
-          <h5>Semana 3</h5>
-          <input type="checkbox" id="week3"> Concluído
-        </div>
-        <div class="progress-step mb-3">
-          <h5>Semana 4</h5>
-          <input type="checkbox" id="week4"> Concluído
-        </div>
+  <div class="container">
+    <h1>📘 Diário Digital</h1>
+    
+    <form id="diarioForm">
+      <div class="input-group">
+        <label for="vitoria">✨ Vitória do Dia</label>
+        <textarea id="vitoria" placeholder="Escreva algo que você conquistou hoje..."></textarea>
       </div>
-      
-      <button class="btn btn-primary mt-3">Salvar Progresso</button>
-    </main>
+
+      <div class="input-group">
+        <label for="desabafo">💭 Desabafo</label>
+        <textarea id="desabafo" placeholder="Coloque aqui o que está sentindo..."></textarea>
+      </div>
+
+      <div class="input-group">
+        <label for="mudanca">🌱 O que posso mudar?</label>
+        <textarea id="mudanca" placeholder="Escreva algo que deseja melhorar..."></textarea>
+      </div>
+
+      <button type="submit">Salvar meu dia</button>
+    </form>
+
+    <div id="mensagem" class="mensagem">
+    </div>
   </div>
 
- 
+  <script src="missao.js"></script>
 </body>
 </html>
