@@ -32,21 +32,10 @@
         </div>
       </div>
       
-      <button class="btn btn-primary mt-3" onclick="saveProgress()">Salvar Progresso</button>
+      <button class="btn btn-primary mt-3">Salvar Progresso</button>
     </main>
   </div>
 
-  <script>
-    function saveProgress() {
-      const progress = {
-        week1: document.getElementById('week1').checked,
-        week2: document.getElementById('week2').checked,
-        week3: document.getElementById('week3').checked,
-        week4: document.getElementById('week4').checked,
-      };
-      console.log('Progress to save in backend:', progress);
-      alert('Progresso salvo com sucesso!');
-    }
-  </script>
+ 
 </body>
 </html>
