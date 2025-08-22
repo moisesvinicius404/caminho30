@@ -3,7 +3,7 @@ const formCadastro = document.getElementById('form-cadastro');
 const btnCadastro = document.getElementById('btn-cadastrar');
 
 if (formCadastro) {
-  formCadastro.addEventListener('submit', (e) => {
+  formCadastro.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const nome = document.getElementById('nome').value.trim();
@@ -31,16 +31,30 @@ if (formCadastro) {
       return;
     }
 
-    // Salva no localStorage
-    localStorage.setItem('usuario', JSON.stringify({ nome, email, senha }));
-    localStorage.setItem('logado', 'true');
+    //  Envia para o backend Django
+    try {
+      const response = await fetch("8000", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nome, email, senha })
+      });
 
-    // Redireciona
-    window.location.href = 'boas-vindas/boas-vindas.html';
+      const data = await response.json();
+      alert(data.msg);
+
+      if (response.ok) {
+        
+        window.location.href = 'boas-vindas/boas-vindas.html';
+      }
+    } catch (error) {
+      alert("Erro ao conectar com servidor.");
+      console.error(error);
+    }
+
   });
 }
 
-// Botão de ir para cadastro (se existir)
+
 if (btnCadastro) {
   btnCadastro.addEventListener('click', () => {
     window.location.href = 'cadastro.html';
@@ -51,7 +65,7 @@ if (btnCadastro) {
 const formLogin = document.getElementById('form-login');
 
 if (formLogin) {
-  formLogin.addEventListener('submit', (e) => {
+  formLogin.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const email = document.getElementById('email').value.trim();
@@ -71,24 +85,47 @@ if (formLogin) {
       return;
     }
 
-    // Aqui você chamaria o backend para verificar login
-    alert("Login validado no front-end! Depois você conecta ao backend.");
+    // Envia para o backend Django
+    try {
+      const response = await fetch("8000", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, senha })
+      });
+
+      const data = await response.json();
+      alert(data.msg);
+
+      if (response.ok) {
+        // Exemplo: salvar usuário
+        localStorage.setItem("usuario", JSON.stringify(data.user));
+        localStorage.setItem("logado", "true");
+
+        // Redireciona
+        window.location.href = 'dashboard.html';
+      }
+    } catch (error) {
+      alert("Erro ao conectar com servidor.");
+      console.error(error);
+    }
+
   });
 }
 
-// Funcionalidade de Ver senha
+// -------------------- VER SENHA --------------------
 const senhaInput = document.getElementById('senha');
 const toggleSenha = document.getElementById('toggleSenha');
 
-toggleSenha.addEventListener('click', () => {
-  if (senhaInput.type === 'password') {
-    senhaInput.type = 'text';
-    toggleSenha.classList.remove('bi-eye');
-    toggleSenha.classList.add('bi-eye-slash');
-  } else {
-    senhaInput.type = 'password';
-    toggleSenha.classList.remove('bi-eye-slash');
-    toggleSenha.classList.add('bi-eye');
-  }
-});
-
+if (toggleSenha && senhaInput) {
+  toggleSenha.addEventListener('click', () => {
+    if (senhaInput.type === 'password') {
+      senhaInput.type = 'text';
+      toggleSenha.classList.remove('bi-eye');
+      toggleSenha.classList.add('bi-eye-slash');
+    } else {
+      senhaInput.type = 'password';
+      toggleSenha.classList.remove('bi-eye-slash');
+      toggleSenha.classList.add('bi-eye');
+    }
+  });
+}
