@@ -86,7 +86,6 @@ main {
 
 
 
-/* ===== Responsividade ===== */
 
 /* Tablets e notebooks - largura entre 768px e 1024px */
 @media (max-width: 1024px) {
@@ -291,7 +290,7 @@ footer {
     font-size: 14px;
 }
 
-/* Responsivo */
+/* Responsividade footer */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;

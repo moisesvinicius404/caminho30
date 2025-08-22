@@ -1,6 +1,8 @@
+// -------------------- CONFIGURAÇÃO DO BACKEND --------------------
+const API_BASE = "https://7fc5bcc23bc1.ngrok-free.app/"; 
+
 // -------------------- CADASTRO --------------------
 const formCadastro = document.getElementById('form-cadastro');
-const btnCadastro = document.getElementById('btn-cadastrar');
 
 if (formCadastro) {
   formCadastro.addEventListener('submit', async (e) => {
@@ -10,7 +12,7 @@ if (formCadastro) {
     const email = document.getElementById('email').value.trim();
     const senha = document.getElementById('senha').value;
 
-    // Validação de nome: só letras e espaços, mínimo 3 caracteres
+    // Validação de nome
     const nomeRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ ]{3,}$/;
     if (!nomeRegex.test(nome)) {
       alert("O nome deve ter pelo menos 3 letras e não pode conter números ou símbolos.");
@@ -31,33 +33,25 @@ if (formCadastro) {
       return;
     }
 
-    //  Envia para o backend Django
+    // Envia para o backend Django
     try {
-      const response = await fetch("8000", {
+      const response = await fetch(`${API_BASE}/api/cadastro/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nome, email, senha })
       });
 
       const data = await response.json();
-      alert(data.msg);
+      alert(data.msg || "Cadastro realizado com sucesso!");
 
       if (response.ok) {
-        
+        // Redireciona para página de boas-vindas
         window.location.href = 'boas-vindas/boas-vindas.html';
       }
     } catch (error) {
-      alert("Erro ao conectar com servidor.");
+      alert("Erro ao conectar com o servidor.");
       console.error(error);
     }
-
-  });
-}
-
-
-if (btnCadastro) {
-  btnCadastro.addEventListener('click', () => {
-    window.location.href = 'cadastro.html';
   });
 }
 
@@ -87,30 +81,40 @@ if (formLogin) {
 
     // Envia para o backend Django
     try {
-      const response = await fetch("8000", {
+      const response = await fetch(`${API_BASE}/api/login/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, senha })
       });
 
       const data = await response.json();
-      alert(data.msg);
+      alert(data.msg || "Login realizado com sucesso!");
 
       if (response.ok) {
-        // Exemplo: salvar usuário
-        localStorage.setItem("usuario", JSON.stringify(data.user));
+        if (data.user) localStorage.setItem("usuario", JSON.stringify(data.user));
         localStorage.setItem("logado", "true");
 
-        // Redireciona
-        window.location.href = 'dashboard.html';
+        // Redireciona para página de boas-vindas
+        window.location.href = 'boas-vindas/boas-vindas.html';
       }
     } catch (error) {
-      alert("Erro ao conectar com servidor.");
+      alert("Erro ao conectar com o servidor.");
       console.error(error);
     }
-
   });
 }
+
+
+// BOTÃO CADASTRO
+const btnCadastro = document.getElementById('btn-cadastrar');
+
+if (btnCadastro) {
+  btnCadastro.addEventListener('click', () => {
+    window.location.href = 'cadastro.html';
+  });
+}
+
+
 
 // -------------------- VER SENHA --------------------
 const senhaInput = document.getElementById('senha');

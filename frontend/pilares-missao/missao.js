@@ -113,7 +113,7 @@ if (container) {   // só roda se estiver na página das missões
 
 
 // ----------------------
-// MISSÃO MENTAL (Neuro + Psicologia + Estoicismo)
+// MISSÃO MENTAL
 // ----------------------
 (function(){
   const container = document.getElementById("missionsMentalContainer");
