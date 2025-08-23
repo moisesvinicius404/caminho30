@@ -7,5 +7,6 @@ urlpatterns = [
      path('login/', views.login_view, name='login'),
      path('boas-vindas/',views.boas_vindas_view,name='boas-vindas'),
      path('missoes/',views.missoes_view, name='missoes'),
+     path('api/cadastro/', views.cadastro_view, name='cadastro_api'),
+     path('api/login/', views.login_view, name='login_api'),
 ]
-
