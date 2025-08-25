@@ -1,5 +1,5 @@
 // -------------------- CONFIGURAÇÃO DO BACKEND --------------------
-const API_BASE = "https://7fc5bcc23bc1.ngrok-free.app/"; 
+const API_BASE = "https://89f917a3528d.ngrok-free.app/"; 
 
 // -------------------- CADASTRO --------------------
 const formCadastro = document.getElementById('form-cadastro');
@@ -41,13 +41,17 @@ if (formCadastro) {
         body: JSON.stringify({ nome, email, senha })
       });
 
-      const data = await response.json();
-      alert(data.msg || "Cadastro realizado com sucesso!");
+    const data = await response.json();
+    alert(data.message || "Cadastro realizado com sucesso!"); // corrige a chave
 
-      if (response.ok) {
-        // Redireciona para página de boas-vindas
-        window.location.href = 'boas-vindas/boas-vindas.html';
-      }
+    if (response.ok) {
+       // salva usuário para boas-vindas
+       localStorage.setItem('usuario', JSON.stringify({ nome }));
+
+       // redireciona
+      window.location.href = 'boas-vindas/boas-vindas.html';
+}
+
     } catch (error) {
       alert("Erro ao conectar com o servidor.");
       console.error(error);
@@ -88,15 +92,16 @@ if (formLogin) {
       });
 
       const data = await response.json();
-      alert(data.msg || "Login realizado com sucesso!");
+      alert(data.message || "Login realizado com sucesso!");
 
-      if (response.ok) {
+
+      if (response.ok && data.status === 'success') {
         if (data.user) localStorage.setItem("usuario", JSON.stringify(data.user));
         localStorage.setItem("logado", "true");
 
-        // Redireciona para página de boas-vindas
         window.location.href = 'boas-vindas/boas-vindas.html';
-      }
+}
+
     } catch (error) {
       alert("Erro ao conectar com o servidor.");
       console.error(error);
