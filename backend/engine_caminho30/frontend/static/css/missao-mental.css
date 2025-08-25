@@ -1,0 +1,71 @@
+
+    :root{
+      --primary:#6C63FF;
+      --bg:#f7f7ff;
+      --text:#212529;
+      --muted:#6c757d;
+      --success:#28a745;
+      --card:#ffffff;
+    }
+    body{background:var(--bg);font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text)}
+    header{
+      background: radial-gradient(1200px 300px at 20% 0%, rgba(108,99,255,.25), transparent 60%),
+                  linear-gradient(135deg, #6C63FF 0%, #7b74ff 60%, #8a84ff 100%);
+      color:#fff;padding:3rem 1rem;border-radius:0 0 2rem 2rem;position:relative;overflow:hidden
+    }
+    header .halo{
+      position:absolute;inset:-40%;background:radial-gradient(circle at 50% 50%, rgba(255,255,255,.12), transparent 50%);
+      filter:blur(60px);pointer-events:none
+    }
+    .brand{font-weight:800;letter-spacing:.5px}
+    .subtitle{opacity:.95;max-width:780px;margin:0 auto}
+    .chip{
+      display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.15);
+      padding:.4rem .8rem;border-radius:999px;font-weight:600
+    }
+    .progress-wrap{
+      margin-top:1.25rem;background:#fff;border-radius:16px;padding:1rem;box-shadow:0 10px 30px rgba(0,0,0,.08)
+    }
+    .progress{height:14px;border-radius:999px;background:#ecebff}
+    .progress-bar{background:var(--primary)}
+    .stats{display:flex;gap:1rem;flex-wrap:wrap;margin-top:.75rem}
+    .stat{
+      background:#fff;border-radius:12px;padding:.6rem .9rem;font-weight:700;
+      box-shadow:0 6px 18px rgba(0,0,0,.06)
+    }
+    .grid{margin-top:2.2rem}
+    .mission-card{
+      background:var(--card);border:none;border-radius:18px;padding:1.25rem 1.25rem 1.1rem;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);height:100%;position:relative;overflow:hidden
+    }
+    .mission-card::after{
+      content:"";position:absolute;inset:auto -30% -50% -30%;height:120px;background:radial-gradient(240px 40px at 50% 50%, rgba(108,99,255,.12), transparent 40%);
+      transform:rotate(-2deg)
+    }
+    .mission-day{
+      background:var(--primary);color:#fff;border-radius:999px;font-weight:800;
+      padding:.35rem .8rem;font-size:.85rem;letter-spacing:.3px;box-shadow:0 8px 16px rgba(108,99,255,.25)
+    }
+    .mission-title{margin:.8rem 0 .35rem;font-weight:800}
+    .mission-desc{color:var(--muted);font-size:.95rem}
+    .badge-psy{
+      display:inline-block;background:#ecebff;color:#3b37a5;border-radius:999px;padding:.28rem .6rem;
+      font-size:.78rem;font-weight:700;margin-right:.35rem
+    }
+    .btn-mark{
+      border-radius:12px;font-weight:800;letter-spacing:.2px
+    }
+    .btn-mark.done{
+      background:var(--success)!important;color:#fff!important;border:none!important
+    }
+    /* animações */
+    .fade-up{animation:fadeUp .6s ease both}
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}
+    }
+    .pulse{animation:pulse 1.8s ease-in-out infinite}
+    @keyframes pulse{
+      0%,100%{transform:scale(1)}50%{transform:scale(1.03)}
+    }
+    footer{color:#7a7a9a;padding:2rem 0;text-align:center}
+    a.link{color:#4b45ff;text-decoration:none}

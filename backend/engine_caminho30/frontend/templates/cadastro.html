@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="{%static 'css/cadastro.css' %}">
+</head>
+<body>
+
+  <div class="cadastro-card">
+    <h2>Cadastro</h2>
+
+    <form id="form-cadastro">
+     <!-- Como quer ser chamado -->
+<div class="form-group" style="position: relative;">
+  <i class="bi bi-person-fill" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%);"></i>
+  <input type="text" id="nome" placeholder="Como você quer ser chamado?" required style="padding-left: 35px;">
+</div> 
+
+<!-- Email -->
+<div class="form-group" style="position: relative;">
+  <i class="bi bi-envelope-fill" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%);"></i>
+  <input type="email" id="email" placeholder="Digite seu email..." required style="padding-left: 35px;">
+</div>
+
+<!-- Senha -->
+<div class="form-group" style="position: relative;">
+  <i class="bi bi-lock-fill" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%);"></i>
+  <input type="password" id="senha" placeholder="Senha" required style="padding-left: 35px; padding-right: 35px;">
+
+  <!-- Ícone de olho -->
+  <i id="toggleSenha" class="bi bi-eye" 
+     style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+</div>
+
+      <button type="submit" id="fazer-cadastro">Entrar</button>
+      
+    </form>
+  </div>
+
+ <script src="{%static "js/script.js" %}"></script>
+
+</body>
+</html>
