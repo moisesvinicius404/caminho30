@@ -103,6 +103,7 @@ if (container) {   // só roda se estiver na página das missões
         btn.classList.add("btn-success", "done");
         btn.textContent = "✔ Feito";
         
+        
       }
     });
     
