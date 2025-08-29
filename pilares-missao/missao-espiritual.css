@@ -1,0 +1,43 @@
+
+    body {
+      background: #f7f7ff;
+      font-family: "Segoe UI", sans-serif;
+    }
+    header {
+      background-color: #6C63FF;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-radius: 0 0 2rem 2rem;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .mission-card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+      background: white;
+    }
+    .mission-card:hover {
+      transform: translateY(-5px);
+    }
+    .mission-card .card-body {
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+    .mission-day {
+      background-color: #6C63FF;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      display: inline-block;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .done {
+      background-color: #28a745 !important;
+      color: white !important;
+    }

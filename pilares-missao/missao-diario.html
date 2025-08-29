@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diário Digital</title>
+   <link rel="stylesheet" href="missao-diario.css">
+  <link rel="icon" type="imge/png" href="../img/favicon.png">
+</head>
+<body>
+  <div class="container">
+    <h1>📘 Diário Digital</h1>
+    
+    <form id="diarioForm">
+      <div class="input-group">
+        <label for="vitoria">✨ Vitória do Dia</label>
+        <textarea id="vitoria" placeholder="Escreva algo que você conquistou hoje..."></textarea>
+      </div>
+
+      <div class="input-group">
+        <label for="desabafo">💭 Desabafo</label>
+        <textarea id="desabafo" placeholder="Coloque aqui o que está sentindo..."></textarea>
+      </div>
+
+      <div class="input-group">
+        <label for="mudanca">🌱 O que posso mudar?</label>
+        <textarea id="mudanca" placeholder="Escreva algo que deseja melhorar..."></textarea>
+      </div>
+
+      <button type="submit">Salvar meu dia</button>
+    </form>
+
+    <div id="mensagem" class="mensagem">
+    </div>
+  </div>
+
+  <script src="missao.js"></script>
+</body>
+</html>
