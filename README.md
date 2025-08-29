@@ -51,9 +51,9 @@ Acreditamos que todos têm potencial de mudar e **ser uma pessoa melhor a cada d
 
 ---
 
-## 📷 Captura de tela (opcional)
+## 📷 Imagem do site
 
-*(Adicione aqui uma imagem do site quando quiser)*
+![Imagem do site](https://github.com/moisesvinicius404/caminho30/blob/master/imagem-site.png)
 
 ---
 
