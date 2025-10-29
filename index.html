@@ -1,142 +1,163 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caminho30</title>
-    <link rel="icon" type="imge/png" href="img/favicon.png">
-    <link rel="stylesheet" href="src/output.css">
-</head>
-<body>
-    <header id="inicio">
-     <nav class="navbar">
-    <div class="logo">
-        <a href="#inicio">
-            <img src="img/Logo-caminho30.png" alt="Logo Caminho30" width="150" height="100">
-        </a>
-    </div>
+    <title>Caminho30 | Jornada de Transformação</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="./src/output.css">
+    </head>
+<body class="bg-gray-50 font-sans text-gray-800 antialiased">
+    
+    <header id="inicio" class="bg-white shadow sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <div class="logo">
+                <a href="#inicio" class="flex items-center text-3xl text-amber-600 font-bold">
+                    caminho30
+                </a>
+            </div>
 
-    <ul class="menu">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#missao">Missão</a></li>
-    </ul>
+            <ul class="hidden md:flex space-x-8 font-medium">
+                <li><a href="#inicio" class="text-gray-600 hover:text-amber-600 transition duration-300 p-2 rounded-lg">Início</a></li>
+                <li><a href="#sobre" class="text-gray-600 hover:text-amber-600 transition duration-300 p-2 rounded-lg">Sobre</a></li>
+                <li><a href="#missao" class="text-gray-600 hover:text-amber-600 transition duration-300 p-2 rounded-lg">Missão</a></li>
+            </ul>
 
-    <div class="hamburger" onclick="document.querySelector('.menu').classList.toggle('open')">
-        &#9776;
-    </div>
-</nav>
+            <div id="hamburger-menu" class="md:hidden cursor-pointer p-2 rounded-lg hover:bg-gray-100 transition duration-200" onclick="document.querySelector('.menu-mobile').classList.toggle('hidden')">
+                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </div>
+        </nav>
 
-        <h1>🌟 Caminho30 - Uma Jornada de Transformação 🌟</h1>
-  
-  <p>
-    O <strong>Caminho30</strong> é um espaço criado para quem deseja <br>
-    renovar a mente, fortalecer o espírito e trilhar uma jornada <br>
-    de 30 dias em busca de equilíbrio e autoconhecimento.  
-  </p>
+        <ul class="menu-mobile hidden md:hidden bg-white pb-4 border-t">
+            <li class="p-3 text-center border-b"><a href="#inicio" class="block text-gray-700 hover:text-amber-600">Início</a></li>
+            <li class="p-3 text-center border-b"><a href="#sobre" class="block text-gray-700 hover:text-amber-600">Sobre</a></li>
+            <li class="p-3 text-center"><a href="#missao" class="block text-gray-700 hover:text-amber-600">Missão</a></li>
+        </ul>
+    </header>
 
-  <p>
-    Aqui você vai encontrar desafios diários, reflexões inspiradoras, <br>
-    momentos para desabafar, além de conteúdos espirituais que <br>
-    vão ajudar você a se conectar com sua melhor versão.  
-  </p>
+    <section class="pt-20 pb-32 bg-gradient-to-b from-gray-50 to-amber-50">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-5xl sm:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+                🌟 Caminho30 - Uma Jornada de Transformação 🌟
+            </h1>
+    
+            <p class="text-xl mb-6 text-gray-600">
+                O <strong>Caminho30</strong> é um espaço criado para quem deseja 
+                <span class="font-semibold text-amber-700">renovar a mente, fortalecer o espírito</span> e trilhar uma jornada 
+                de 30 dias em busca de equilíbrio e autoconhecimento. 
+            </p>
 
-  <p>
-    <em>Um passo por dia. Trinta dias para mudar sua vida.</em>
-  </p><br><br>
-    <button class="btn-missoes" id="btn-missoes">Ir para missoes</button>
-    </header><br>
+            <p class="text-xl mb-6 text-gray-600">
+                Aqui você vai encontrar desafios diários, reflexões inspiradoras, 
+                momentos para desabafar, além de conteúdos espirituais que 
+                vão ajudar você a se conectar com sua melhor versão. 
+            </p>
 
-    <main>
-        <div class="dividir-secoes1">
-      <section id="sobre">
-  <h2>Sobre o Caminho30</h2>
-  <p>
-    O <strong>Caminho30</strong> é um espaço dedicado à sua transformação pessoal, criado sem fins lucrativos e com um único propósito: ajudar você a se tornar a melhor versão de si mesmo.
-  </p>
-  <p>
-    Nosso enfoque é em três pilares da vida: <strong>espiritual, mental e físico</strong>. Aqui, você encontrará ensinamentos, práticas e recomendações para fortalecer cada um desses aspectos, construindo hábitos saudáveis e duradouros.
-  </p>
-  <p>
-    Durante <strong>30 dias</strong>, você será convidado a sair da sua zona de conforto, participar de desafios e exercícios que estimulam a reflexão, a motivação e a disciplina. Cada dia é uma oportunidade de crescer e avançar em direção a uma vida mais equilibrada e plena.
-  </p>
-  <p>
-    No Caminho30, você encontrará: 
-    <ul>
-      <li>Ensaios e práticas espirituais para se conectar consigo mesmo;</li>
-      <li>Exercícios mentais e atividades para aumentar o foco, a criatividade e o bem-estar;</li>
-      <li>Recomendações físicas que incentivam o cuidado com o corpo e a saúde.</li>
-    </ul>
-  </p>
-  <p>
-    Estamos aqui para inspirar, motivar e guiar você nessa jornada de autodescoberta. Prepare-se para 30 dias que podem transformar a sua vida!
-  </p>
-</section><br>
-<section class="img">
-    <img src="img/Logo-caminho30.png" alt="ggg" width="600px" height="450px">
-</section><br>
-</div>
+            <p class="text-2xl italic mb-10 text-amber-800 font-medium">
+                "Um passo por dia. Trinta dias para mudar sua vida."
+            </p>
+            
+            <button id="btn-missoes" 
+                    class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-amber-300">
+                Ir para as Missões
+            </button>
+        </div>
+    </section>
 
-<div class="dividir-secoes2">
-    <section class="secao-img">
-       <img src="img/img-missao.png" alt="foto montanha com bandeira vermelha e alvo, algo relacionado a foto e missão cumprida" width="600px" height="850px"> 
-    </section><br>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
-    <section id="missao">
-  <h2>Missão</h2>
-  <p>
-    Sua missão no Caminho30 é embarcar em uma jornada de 30 dias de autodesenvolvimento. Cada dia será uma oportunidade de sair da sua zona de conforto, aprender algo novo e criar hábitos que transformam sua vida.
-  </p>
-  
-  <p>
-    A missão é dividida em três pilares principais:
-  </p>
+        <section id="sobre" class="mb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6 border-b-4 border-amber-400 inline-block pb-1">Sobre o Caminho30</h2>
+                    
+                    <p class="text-lg mb-4 text-gray-700">
+                        O <strong>Caminho30</strong> é um espaço dedicado à sua transformação pessoal, criado sem fins lucrativos e com um único propósito: ajudar você a se tornar a melhor versão de si mesmo.
+                    </p>
+                    <p class="text-lg mb-4 text-gray-700">
+                        Nosso enfoque é em três pilares da vida: <strong>espiritual, mental e físico</strong>. Aqui, você encontrará ensinamentos, práticas e recomendações para fortalecer cada um desses aspectos, construindo hábitos saudáveis e duradouros.
+                    </p>
+                    
+                    <h3 class="text-xl font-semibold mt-6 mb-3 text-amber-700">O que você encontrará:</h3>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-gray-700 ml-4">
+                        <li>Ensaios e práticas espirituais para se conectar consigo mesmo;</li>
+                        <li>Exercícios mentais e atividades para aumentar o foco, a criatividade e o bem-estar;</li>
+                        <li>Recomendações físicas que incentivam o cuidado com o corpo e a saúde.</li>
+                    </ul>
+                </div>
 
-  <ul>
-    <li><strong>Espiritual:</strong> práticas de reflexão, meditação e conexão consigo mesmo.</li>
-    <li><strong>Mental:</strong> exercícios, leituras e vídeos que estimulam a mente e a motivação.</li>
-    <li><strong>Diario:</strong> Onde você pode escrever seus desabafos e vitórias.</li>
-  </ul>
+                <div class="order-1 lg:order-2 flex justify-center">
+                    <img src="img/Logo-caminho30.png" alt="Logo Caminho30" class="w-full max-w-md rounded-xl shadow-2xl transform hover:scale-[1.02] transition duration-500 border-4 border-white">
+                </div>
+            </div>
+        </section>
 
-  <p>
-    Durante esses 30 dias, você será convidado a:
-  </p>
+        <section id="missao">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="flex justify-center order-1">
+                    <img src="img/img-missao.png" alt="Foto montanha com bandeira vermelha e alvo, representando missão cumprida" class="w-full max-w-lg rounded-xl shadow-2xl border-4 border-amber-200"> 
+                </div>
 
-  <ul>
-    <li>Seguir exercícios diários que desenvolvem disciplina e foco.</li>
-    <li>Refletir sobre seus hábitos, conquistas e áreas que precisa melhorar.</li>
-    <li>Registrar seu progresso e compartilhar suas descobertas consigo mesmo.</li>
-  </ul>
+                <div class="order-2">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6 border-b-4 border-blue-400 inline-block pb-1">Nossa Missão</h2>
+                    
+                    <p class="text-lg mb-4 text-gray-700">
+                        Sua missão no Caminho30 é embarcar em uma jornada de 30 dias de autodesenvolvimento. Cada dia será uma oportunidade de sair da sua zona de conforto, aprender algo novo e criar hábitos que transformam sua vida.
+                    </p>
+                
+                    <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-700">Foco nos 3 Pilares:</h3>
+                    <ul class="space-y-2 text-lg text-gray-700 mb-6">
+                        <li class="flex items-center"><span class="text-blue-500 mr-2 font-bold text-xl">&rarr;</span> Espiritual: práticas de reflexão, meditação e conexão consigo mesmo.</li>
+                        <li class="flex items-center"><span class="text-blue-500 mr-2 font-bold text-xl">&rarr;</span> Mental: exercícios, leituras e vídeos que estimulam a mente e a motivação.</li>
+                        <li class="flex items-center"><span class="text-blue-500 mr-2 font-bold text-xl">&rarr;</span> Diário: Onde você pode escrever seus desabafos e vitórias.</li>
+                    </ul>
 
-  <p>
-    O Caminho30 não é apenas um desafio, mas uma oportunidade de transformação contínua. Ao final desses 30 dias, você terá fortalecido mente, corpo e espírito, construído novos hábitos e se tornado uma pessoa melhor.
-  </p>
-</section>
-   
-</div>
-
-
+                    <p class="text-lg italic text-gray-600 border-l-4 border-blue-300 pl-3">
+                        O Caminho30 não é apenas um desafio, mas uma oportunidade de transformação contínua.
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-    <div class="footer-container">
-        <div class="footer-logo">
-            <img src="img/Logo-caminho30.png" alt="Logo Caminho30" width="120" height="80">
+    <footer class="bg-gray-900 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="flex flex-col md:flex-row justify-between items-center border-b border-gray-700 pb-6 mb-6">
+                
+                <div class="footer-logo mb-4 md:mb-0">
+                    <img src="img/Logo-caminho30.png" alt="Logo Caminho30" width="100" class="filter grayscale invert opacity-80">
+                </div>
+                
+                <div class="footer-links flex space-x-6 mb-4 md:mb-0">
+                    <a href="#inicio" class="text-gray-300 hover:text-amber-400 transition">Início</a>
+                    <a href="#sobre" class="text-gray-300 hover:text-amber-400 transition">Sobre</a>
+                    <a href="#missao" class="text-gray-300 hover:text-amber-400 transition">Missão</a>
+                </div>
+                
+                <a href="termos-uso.html" class="footer-termo text-sm text-gray-500 hover:text-amber-400 transition">Termos de uso</a>
+                
+            </div>
+            <p class="text-center text-sm text-gray-500">&copy; 2024 Caminho30. Todos os direitos reservados.</p>
         </div>
-        <div class="footer-links">
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#missao">Missão</a>
-        </div>
-        
-        <a href="termos-uso.html"  class="footer-termo">Termos de uso</a>
-        
-        
-    </div>
-</footer>
+    </footer>
 
+<script>
+    // Adicionando um script simples para o menu mobile, já que o toggle inline era para a classe 'open' que removi
+    const hamburger = document.getElementById('hamburger-menu');
+    const mobileMenu = document.querySelector('.menu-mobile');
 
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
 
-<script src="script.js"></script>
+    // Fechar o menu mobile ao clicar em um link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+</script>
 </body>
 </html>
